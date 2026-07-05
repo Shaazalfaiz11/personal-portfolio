@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon CDN for tech logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Ambient Glow Effects -->
+    <div class="ambient-glows">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        <div class="glow-3"></div>
+    </div>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Floating Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo-container">
+                <div class="logo-circle-vs" id="nav-initials">VS</div>
+                <a href="#home" class="logo-text" id="nav-logo-text">Name</a>
+            </div>
+            
+            <!-- Hamburger menu icon for mobile -->
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#focus">Focus</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" target="_blank" class="btn-nav-resume" id="nav-resume-btn">
+                    View Resume <i class="fa-regular fa-file-pdf"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="hero-particles" class="hero-particle-canvas"></canvas>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-tagline-text" id="hero-tagline">Hello, I'm</div>
+                <h1 class="hero-name" id="hero-name">Full Name</h1>
+
+                <div class="hero-role-wrapper">
+                    <span>I'm a&nbsp;</span>
+                    <span class="hero-role" id="typed-roles"></span>
+                </div>
+
+                <p class="hero-description" id="hero-bio">
+                    Description about yourself.
+                </p>
+
+                <div class="cta-group">
+                    <a href="#" download class="btn-premium btn-premium-primary" id="hero-download-resume">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="#" target="_blank" class="btn-premium btn-premium-secondary" id="hero-view-resume">
+                        <i class="fa-regular fa-file-lines"></i> View Resume
+                    </a>
+                </div>
+
+                <div class="hero-socials-row">
+                    <span class="social-connect-label">Let's connect</span>
+                    <div class="social-icon-links" id="hero-social-links">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Orbit Section -->
+            <div class="hero-image-area">
+                <div class="orbit-container">
+                    <!-- Orbit Rings (Background tracks) -->
+                    <div class="orbit-ring ring-1"></div>
+                    <div class="orbit-ring ring-2"></div>
+                    <div class="orbit-ring ring-3"></div>
+                    
+                    <!-- Orbiting Nodes (Populated by JavaScript) -->
+                    <div id="orbiting-nodes-container">
+                        <!-- Orbit Nodes will be injected here -->
+                    </div>
+
+                    <!-- Central Profile Picture & Cursive Nameplate Container -->
+                    <div class="central-profile-area">
+                        <div class="inner-profile-ring">
+                            <div class="profile-avatar-container">
+                                <img src="placeholder-profile.jpg" alt="Profile Picture" id="profile-img">
+                            </div>
+                        </div>
+                        
+                        <!-- Cursive Nameplate Card -->
+                        <div class="profile-nameplate">
+                            <div class="nameplate-title" id="nameplate-title">Name</div>
+                            <div class="nameplate-subtitle" id="nameplate-subtitle">Title</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Stats Bar -->
+            <div class="hero-stats-bar" id="hero-stats-bar">
+                <!-- Injected dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section reveal">
+        <div class="container">
+            <div class="about-flex-container">
+                <!-- Left: Laptop Illustration -->
+                <div class="about-illustration-side">
+                    <div class="laptop-canvas">
+                        <div class="laptop-screen">
+                            <div class="code-editor-header">
+                                <span class="editor-dot dot-r"></span>
+                                <span class="editor-dot dot-y"></span>
+                                <span class="editor-dot dot-g"></span>
+                            </div>
+                            <div class="code-editor-body" id="code-editor-content">
+                                <!-- Code Editor mock text -->
+                                <div class="edit-line"><span class="c-key">import</span> sys</div>
+                                <div class="edit-line"><span class="c-key">class</span> <span class="c-cls">Developer</span>:</div>
+                                <div class="edit-line">&nbsp;&nbsp;<span class="c-key">def</span> <span class="c-func">__init__</span>(self):</div>
+                                <div class="edit-line">&nbsp;&nbsp;&nbsp;&nbsp;self.name = <span class="c-str">"Vandana"</span></div>
+                                <div class="edit-line">&nbsp;&nbsp;&nbsp;&nbsp;self.role = <span class="c-str">"Developer"</span></div>
+                                <div class="edit-line">&nbsp;&nbsp;&nbsp;&nbsp;self.skills = [<span class="c-str">"Python"</span>, <span class="c-str">"Java"</span>]</div>
+                                <div class="edit-line">&nbsp;&nbsp;<span class="c-key">def</span> <span class="c-func">status</span>(self):</div>
+                                <div class="edit-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-key">return</span> <span class="c-str">"Code all day!"</span></div>
+                            </div>
+                        </div>
+                        <div class="laptop-base"></div>
+                        <div class="laptop-base-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Right Contents -->
+                <div class="about-details-side">
+                    <div class="about-meta-tag" id="about-meta-tag">ABOUT ME</div>
+                    <h2 class="about-h2" id="about-title">Who I Am</h2>
+                    
+                    <ul class="about-bullet-points" id="about-bullets">
+                        <!-- Dynamic content -->
+                    </ul>
+
+                    <!-- Stats Row -->
+                    <div class="about-stats-row" id="about-stats-row">
+                        <!-- Dynamic stats cards -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section (Horizontal Timeline) -->
+    <section id="education" class="section reveal">
+        <div class="container">
+            <div class="section-top-tag text-purple">EDUCATION</div>
+            <div class="horizontal-timeline-wrapper" id="education-timeline">
+                <div class="timeline-horizontal-line"></div>
+                <!-- Timeline cards injected dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Leadership Section -->
+    <section id="experience" class="section reveal">
+        <div class="container">
+            <div class="section-top-tag text-pink">EXPERIENCE & LEADERSHIP</div>
+            <div class="experience-split-grid">
+                <!-- Left timeline -->
+                <div class="experience-vertical-timeline" id="experience-timeline">
+                    <div class="timeline-v-line"></div>
+                    <!-- Job timeline items injected dynamically -->
+                </div>
+
+                <!-- Right Quote Panel -->
+                <div class="experience-quote-side">
+                    <div class="experience-quote-box border-purple">
+                        <div class="quote-icon quote-open"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="quote-text-content" id="experience-quote">
+                            Quote goes here...
+                        </p>
+                        <div class="quote-icon quote-close"><i class="fa-solid fa-quote-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section reveal">
+        <div class="container">
+            <div class="projects-header-row">
+                <div class="section-top-tag text-cyan">FEATURED PROJECTS</div>
+                <a href="#" target="_blank" class="view-all-projects-link" id="projects-github-link">
+                    View All Projects <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="projects-carousel-wrapper">
+                <!-- Carousel Left Arrow -->
+                <button class="carousel-nav-btn prev-btn" id="carousel-prev"><i class="fa-solid fa-chevron-left"></i></button>
+
+                <div class="projects-carousel-grid" id="projects-container">
+                    <!-- Dynamic project cards -->
+                </div>
+
+                <!-- Carousel Right Arrow -->
+                <button class="carousel-nav-btn next-btn" id="carousel-next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section reveal">
+        <div class="container">
+            <div class="skills-section-header">
+                <h2 class="skills-title">TECHNICAL <span class="gradient-text">SKILLS</span></h2>
+                <p class="skills-subtitle">Technologies and tools I use to build amazing things</p>
+                <div class="skills-header-decorator">
+                    <span class="decorator-bar"></span>
+                </div>
+            </div>
+            
+            <div class="skills-cards-container" id="skills-container">
+                <!-- Skill cards injected dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Focus Section (Side-By-Side Row) -->
+    <section id="certifications" class="section reveal">
+        <div class="container side-by-side-grid">
+            <!-- Left Side: Certifications -->
+            <div class="certs-column">
+                <div class="certs-header-box">
+                    <div class="section-top-tag text-cyan">CERTIFICATIONS</div>
+                    <a href="#" class="view-all-certs" id="certs-all-link">View All <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="certs-horizontal-scroll" id="certs-container">
+                    <!-- Injected dynamically -->
+                </div>
+            </div>
+
+            <!-- Right Side: Current Focus -->
+            <div class="focus-column" id="focus">
+                <div class="section-top-tag text-purple">CURRENT FOCUS</div>
+                <div class="focus-cards-grid" id="focus-container">
+                    <!-- Injected dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section reveal">
+        <div class="container">
+            <div class="contact-split-grid">
+                <!-- Left details -->
+                <div class="contact-details-side">
+                    <h2 class="contact-title-main" id="contact-title">Let's Build Something Great <span class="gradient-text-blue">Together!</span></h2>
+                    <p class="contact-lead-desc" id="contact-subtitle">Have a project in mind, want to collaborate, or looking for an intern? I'd love to hear from you!</p>
+
+                    <div class="contact-links-list" id="contact-links-container">
+                        <!-- Dynamic contact links -->
+                    </div>
+                </div>
+
+                <!-- Right Form and Paper Airplane -->
+                <div class="contact-form-side">
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-row-2">
+                                <div class="form-input-box">
+                                    <input type="text" id="form-name" required placeholder="Your Name">
+                                </div>
+                                <div class="form-input-box">
+                                    <input type="email" id="form-email" required placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="form-input-box">
+                                <input type="text" id="form-subject" required placeholder="Subject">
+                            </div>
+                            <div class="form-input-box">
+                                <textarea id="form-message" required placeholder="Your Message" rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn-send-message" id="form-submit-btn">
+                                Send Message <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <div id="form-status" class="form-status"></div>
+                        </form>
+                    </div>
+
+                    <!-- 3D Envelope Decoration -->
+                    <div class="envelope-decoration-graphic">
+                        <div class="envelope-back"></div>
+                        <div class="paper-airplane-glow">
+                            <i class="fa-solid fa-paper-plane plane-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p id="footer-text">&copy; 2026 Name. All rights reserved.</p>
+            <button class="scroll-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Scroll to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Load configurations and dynamic app logic -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
