@@ -14,8 +14,8 @@ const portfolioData = {
     resumeLink: "Shaaz_Alfaiz_Resume.pdf", // Your resume filename
     bio: "Full Stack Developer specializing in scalable MERN applications, real-time systems, cloud deployment, and modern backend architecture. Passionate about building production-ready software with React, Node.js, MongoDB, Redis, Docker, AWS, and AI-powered solutions.",
     socials: {
-      linkedin: "#", // Replace with your LinkedIn URL
-      github: "#", // Replace with your GitHub URL
+      linkedin: "https://www.linkedin.com/feed/", // Replace with your LinkedIn URL
+      github: "https://github.com/Shaazalfaiz11", // Replace with your GitHub URL
       email: "shaazalfaiz25@gmail.com"
     }
   },
@@ -33,15 +33,15 @@ const portfolioData = {
   // Bottom stats capsule bar on hero page
   stats: [
     {
-      value: "2",
+      value: "0-1",
       label: "Years Experience",
       icon: "fa-solid fa-briefcase",
       colorClass: "icon-purple",
       isStatic: false
     },
     {
-      value: "4",
-      label: "Production Projects",
+      value: "8+",
+      label: "Live Projects",
       icon: "fa-solid fa-code",
       colorClass: "icon-cyan",
       isStatic: false
@@ -54,7 +54,7 @@ const portfolioData = {
       isStatic: false
     },
     {
-      value: "7.1",
+      value: "7.3",
       label: "CGPA",
       icon: "fa-solid fa-graduation-cap",
       colorClass: "icon-blue",
@@ -102,21 +102,21 @@ const portfolioData = {
     ],
     stats: [
       {
-        value: "7.1",
+        value: "7.3",
         label: "CGPA<br>(B.Tech)",
         icon: "fa-solid fa-graduation-cap",
         borderColorClass: "border-blue",
-        target: "7.1"
+        target: "7.3"
       },
       {
-        value: "4",
-        label: "Production<br>Projects",
+        value: "8+",
+        label: "Live<br>Projects",
         icon: "fa-solid fa-code",
         borderColorClass: "border-cyan",
         target: "4"
       },
       {
-        value: "2",
+        value: "0-1",
         label: "Years<br>Experience",
         icon: "fa-solid fa-briefcase",
         borderColorClass: "border-purple",
@@ -177,6 +177,16 @@ const portfolioData = {
         nodeIcon: "fa-solid fa-briefcase",
         description: "Developed scalable MERN applications including Order Management, Admin Dashboard, Attendance Management System, Redis caching, Docker containerization, AWS deployment, Socket.io real-time systems, JWT authentication and CI/CD pipelines."
       },
+
+      {
+        timeRange: "Apr 2026 – May 2026",
+        role: "Full Stack Developer",
+        company: "Grow Spark Consulting",
+        colorClass: "text-pink",
+        nodeClass: "glow-pink",
+        nodeIcon: "fa-solid fa-briefcase",
+        description: "Developed scalable MERN applications including Order Management, Admin Dashboard, Attendance Management System, Redis caching,  Socket.io real-time systems, JWT authentication and CI/CD pipelines."
+      },
       {
         timeRange: "Sep 2025 – Jan 2026",
         role: "Founder & Full Stack Developer",
@@ -198,8 +208,8 @@ const portfolioData = {
       borderClass: "border-purple",
       iconClass: "fa-solid fa-gears text-purple",
       tags: ["React", "Node.js", "MongoDB", "Redis", "Socket.io", "Docker", "AWS"],
-      liveDemo: "#",
-      github: "#"
+      liveDemo: "https://boutiqueware.vercel.app/",
+      github: "https://github.com/Shaazalfaiz11/DreamFit"
     },
     {
       title: "DishPop",
@@ -208,28 +218,28 @@ const portfolioData = {
       borderClass: "border-cyan",
       iconClass: "fa-solid fa-store text-cyan",
       tags: ["React", "Node.js", "MongoDB", "Express", "REST API"],
-      liveDemo: "#",
-      github: "#"
+      liveDemo: "https://www.dishpop.in/",
+      github: "https://github.com/shivamkumar00001/dishpop_restro_side_backend"
     },
     {
-      title: "Orry Chat Application",
-      description: "Real-time chat platform supporting JWT Authentication, Redis Caching, Online Presence, Typing Indicator and Socket.io communication.",
+      title: "Proximate based Application",
+      description: "Developed a real-time virtual collaboration platform using React, Node.js, Express, Socket.IO, and MongoDB, where users interact as avatars on a shared 2D map. Implemented proximity-based auto chat, group messaging, image sharing, typing indicators, user presence, and live position synchronization to deliver an immersive, multiplayer communication experience.",
       image: "orry.png",
       borderClass: "border-pink",
       iconClass: "fa-solid fa-comments text-pink",
       tags: ["React", "Socket.io", "Redis", "MongoDB"],
-      liveDemo: "#",
-      github: "#"
+      liveDemo: "https://virtual-cosmos-bice.vercel.app/",
+      github: "https://github.com/Shaazalfaiz11/Virtual-Cosmos"
     },
     {
-      title: "EKLAVYA",
-      description: "AI-powered adaptive learning platform built for Smart India Hackathon with personalized learning recommendations.",
+      title: "Veda-AI",
+      description: "Built a full-stack AI assessment generation platform using Next.js, Node.js, Express, MongoDB, Redis, BullMQ, and WebSockets. Implemented asynchronous LLM-powered question paper generation with real-time progress updates, idempotency protection, targeted question regeneration, and PDF export. Designed a scalable, fault-tolerant architecture with job queues, retry mechanisms, and timeout handling for reliable AI workflows.",
       image: "eklavya.png",
       borderClass: "border-blue",
       iconClass: "fa-solid fa-brain text-blue",
       tags: ["AI", "Machine Learning", "Recommendation System"],
-      liveDemo: "#",
-      github: "#"
+      liveDemo: "https://veda-ai-rosy-eight.vercel.app",
+      github: "https://github.com/Shaazalfaiz11/veda-ai"
     }
   ],
 
